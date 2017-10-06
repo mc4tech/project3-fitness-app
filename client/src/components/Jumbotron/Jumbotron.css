@@ -1,0 +1,7 @@
+.jumbotron {
+  min-height: 300px;
+  /*padding-top: 75px;*/
+  background: gray;
+  background-image: url("image.png");
+}
+
