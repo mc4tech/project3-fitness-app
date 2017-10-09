@@ -1,9 +1,9 @@
 const express = require("express");
-const path = require("path");
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3001;
+const mongoose = require("mongoose");
+const routes = require("./routes");
 const app = express();
-// const apiRoutes = require("./routes/apiRoutes");
+const PORT = process.env.PORT || 3001;
 
 // Serve up static assets
 app.use(express.static("client/build"));
