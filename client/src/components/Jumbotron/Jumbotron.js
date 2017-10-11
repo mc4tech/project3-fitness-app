@@ -4,7 +4,7 @@ import "./Jumbotron.css";
 const Jumbotron = () => (
   <div className="jumbotron text-center">
   	<div className="container">
-  	  <h1 className="title">Fit Match</h1>
+  	  <h1 className="title">Fit Match </h1>
     </div>
   </div>
 );
