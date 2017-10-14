@@ -1,6 +1,7 @@
 import React from "react";
 import "./Nav.css";
 
+
 const Nav = () => (
   <nav className="navbar navbar-default">
   <div className="container-fluid">
@@ -19,7 +20,7 @@ const Nav = () => (
         <li className="active"><a href="/">Home <span className="sr-only">(current)</span></a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="#">Login</a></li> 
+        <li><a href="#" onClick= {this.open}>Login</a></li> 
       </ul>
     </div>
   </div>

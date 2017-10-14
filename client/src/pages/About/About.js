@@ -24,6 +24,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <Nav/>
         <Jumbotron/>
         <Container>
           <Row>
