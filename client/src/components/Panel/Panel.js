@@ -3,7 +3,7 @@ import "./Panel.css";
 
 
 const Panel = ({ children }) =>
-  <div style={{ height: 300 }} className="panel panel-default">
+  <div style={{ height: 500 }} className="panel panel-default">
     {children}
   </div>;
 

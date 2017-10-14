@@ -18,12 +18,12 @@ class Home extends Component {
 
   render() {
     return (
-      
-      <Container>
-        <Row>
-          <h1 className="text-center">FitMatch</h1>
-        </Row>
-      </Container>
+      <div>
+        <Jumbotron/>
+        <Container>
+          <p>Welcome to FitMatch! </p>
+        </Container>
+      </div>
       );
   }
   
