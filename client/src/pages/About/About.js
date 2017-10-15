@@ -3,10 +3,10 @@ import { Col, Row, Container } from "../../components/Grid";
 import Nav from "../../components/Nav";
 import Jumbotron from "../../components/Jumbotron";
 import { Link } from "react-router-dom";
-
 import "./About.css";
 import Safiyya from "./Images/Safiyya.jpg";
 import Menelik from "./Images/Menelik.jpg";
+import Ray from "./Images/Ray.jpg";
 import Linkedin from "./Images/linkedin.png";
 import Github from "./Images/GitHub-Mark-64px.png";
 
@@ -72,7 +72,7 @@ class Home extends Component {
                 </Col>
                 <Col size="md-3 md-offset-1">
                   <h3>Ray Shin</h3>
-                  <img className="img-circle bioPic" alt="Ray Shin" src="http://via.placeholder.com/140x140"></img>
+                  <img className="img-circle bioPic" alt="Ray Shin" src={Ray}></img>
                   <Row>
                     <a href="#" target="_blank"><img className="img-circle links" src="http://via.placeholder.com/25x25"></img></a>
                    <a href="https://github.com/rayjshin" target="_blank"><img className="img-circle links col-md-offset-2" alt="github" src={Github}></img></a>
