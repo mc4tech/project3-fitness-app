@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import Nav from "../../components/Nav";
 import Jumbotron from "../../components/Jumbotron";
+import { Link } from "react-router-dom";
+
 import "./About.css";
-import Safiyya from "./images/Safiyya.jpg";
-import Menelik from "./images/Menelik.jpg";
-import Linkedin from "./images/linkedin.png";
-import Github from "./images/GitHub-Mark-64px.png";
+import Safiyya from "./Images/Safiyya.jpg";
+import Menelik from "./Images/Menelik.jpg";
+import Linkedin from "./Images/linkedin.png";
+import Github from "./Images/GitHub-Mark-64px.png";
 
 
 class Home extends Component {
