@@ -5,6 +5,15 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+//chat requirements:
+/*eslint no-console:0 */
+// 'use strict';
+// require('core-js/fn/object/assign');
+// const webpack = require('webpack');
+// const WebpackDevServer = require('webpack-dev-server');
+// const config = require('./webpack.config');
+// const open = require('open');
+
 // Serve up static assets
 app.use(express.static("client/build"));
 
@@ -42,3 +51,16 @@ db.once("open", function() {
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
+
+//more chat stuff
+
+// new WebpackDevServer(webpack(config), config.devServer)
+// .listen(config.port, 'localhost', (err) => {
+//   if (err) {
+//     console.log(err);
+//   }
+//   console.log('Listening at localhost:' + config.port);
+//   console.log('Opening your system browser...');
+//   open('http://localhost:' + config.port + '/webpack-dev-server/');
+// });
+
