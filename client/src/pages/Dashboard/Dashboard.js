@@ -7,13 +7,14 @@ import Nav from "../../components/Nav";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
-
+import Profile from "../../components/Profile";
+import PanelWells from "../../components/PanelWells";
 
 class Dashboard extends Component {
   state = {
     users: [],
     username: "",
-    avgMileWalking: "",
+    oneMileRun: "",
     avgMileJogging: "",
     avgMileBiking: ""
   };
@@ -21,6 +22,8 @@ class Dashboard extends Component {
   // componentDidMount() {
   //   this.loadUsers();
   // };
+//
+
 
   loadUsers = () => {
     API.getUsers()
@@ -42,7 +45,7 @@ class Dashboard extends Component {
     if (this.state.username && this.state.avgMileWalking) {
       API.saveUser({
         username: this.state.username,
-        avgMileWalking: this.state.avgMileWalking,
+        oneMileRun: this.state.oneMileRun,
         avgMileJogging: this.state.avgMileJogging,
         avgMileBiking: this.state.avgMileBiking,
       })
@@ -55,13 +58,14 @@ class Dashboard extends Component {
     return (
       <div>
         <Nav />
-        <Jumbotron/>
+        <Profile/>
+        <PanelWells/>
         <Container fluid>
           <Row>
             <Col size="md-6">
             
                 <h1>Please Complete Your Profile?</h1>
-        
+            
               <form>
                 <Input
                   value={this.state.username}
@@ -70,10 +74,10 @@ class Dashboard extends Component {
                   placeholder="username (required)"
                 />
                 <Input
-                  value={this.state.avgMileWalking}
+                  value={this.state.oneMileRun}
                   onChange={this.handleInputChange}
-                  name="avgMileWalking"
-                  placeholder="Average Mile Walking (required)"
+                  name="oneMileRun"
+                  placeholder="1 Mile Run Time (required)"
                 />
                 <Input
                   value={this.state.avgMileJogging}
@@ -91,7 +95,7 @@ class Dashboard extends Component {
                   disabled={!(this.state.avgMileWalking && this.state.username)}
                   onClick={this.handleFormSubmit}
                 >
-                  Submit
+                  Submit  
                 </FormBtn>
               </form>
             </Col>
