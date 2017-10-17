@@ -8,13 +8,14 @@ import Nav from "../../components/Nav";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
-
+import Profile from "../../components/Profile";
+import PanelWells from "../../components/PanelWells";
 
 class Dashboard extends Component {
   state = {
     users: [],
     username: "",
-    avgMileWalking: "",
+    oneMileRun: "",
     avgMileJogging: "",
     avgMileBiking: "",
     open: true,
@@ -23,6 +24,7 @@ class Dashboard extends Component {
   componentDidMount() {
     this.loadUsers();
   };
+
 
   loadUsers = () => {
     API.getUsers()
@@ -44,7 +46,7 @@ class Dashboard extends Component {
     if (this.state.username && this.state.avgMileWalking) {
       API.saveUser({
         username: this.state.username,
-        avgMileWalking: this.state.avgMileWalking,
+        oneMileRun: this.state.oneMileRun,
         avgMileJogging: this.state.avgMileJogging,
         avgMileBiking: this.state.avgMileBiking,
       })
@@ -57,6 +59,44 @@ class Dashboard extends Component {
     return (
       <div>
         <Nav />
+        <Profile/>
+        <PanelWells/>
+        <Container fluid>
+          <Row>
+            <Col size="md-6">
+            
+                <h1>Please Complete Your Profile?</h1>
+            
+              <form>
+                <Input
+                  value={this.state.username}
+                  onChange={this.handleInputChange}
+                  name="username"
+                  placeholder="username (required)"
+                />
+                <Input
+                  value={this.state.oneMileRun}
+                  onChange={this.handleInputChange}
+                  name="oneMileRun"
+                  placeholder="1 Mile Run Time (required)"
+                />
+                <Input
+                  value={this.state.avgMileJogging}
+                  onChange={this.handleInputChange}
+                  name="avgMileJogging"
+                  placeholder="Average Mile Jogging (optional)"
+                />
+                <Input
+                  value={this.state.avgMileBiking}
+                  onChange={this.handleInputChange}
+                  name="avgMileBiking"
+                  placeholder="Average Mile Biking (optional)"
+                />
+                <FormBtn
+                  disabled={!(this.state.avgMileWalking && this.state.username)}
+                  onClick={this.handleFormSubmit}
+                >
+                  Submit
         <Jumbotron>
           <Panel>
             <h1>hey</h1>
@@ -66,6 +106,7 @@ class Dashboard extends Component {
                   data-target="#collapseExample"
                 >
                   Toggle
+
                 </FormBtn>
         <Container fluid>
         {this.state.users.length ? (
