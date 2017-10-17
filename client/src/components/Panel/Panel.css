@@ -1,3 +1,10 @@
 .panel {
-	opacity: .5;
+	opacity: .9;
+	min-height: 500px;
+	/*background: blue;*/
+	border-color: red;
+}
+
+.panel-body {
+	border-color: blue;
 }
