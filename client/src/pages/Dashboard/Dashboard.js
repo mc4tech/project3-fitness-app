@@ -97,6 +97,11 @@ class Dashboard extends Component {
                   onClick={this.handleFormSubmit}
                 >
                   Submit
+                </FormBtn>
+                </form>
+                </Col>
+                </Row>
+                </Container>
         <Jumbotron>
           <Panel>
             <h1>hey</h1>
