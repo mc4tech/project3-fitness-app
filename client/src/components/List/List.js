@@ -1,12 +1,16 @@
 import React from "react";
 import "./List.css";
+import { Col, Row, Container } from "../Grid";
+
 
 export const List = ({ children }) => {
   return (
-    <div className="list-overflow-container">
-      <ul className="list-group">
-        {children}
-      </ul>
+    <div>
+    	<Col size="md-10">	
+	      <ul className="list-group ">
+	        {children}
+	      </ul>
+      </Col>
     </div>
   );
 };

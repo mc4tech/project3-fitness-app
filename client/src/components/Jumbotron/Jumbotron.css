@@ -1,10 +1,14 @@
 .jumbotron {
-    width: 100%;
-    height: 500px;
-    background: #ffffff url("/image.png") no-repeat;
-    background-size: 100% 100%;
-    color:white;
-    font-weight: 50px;
+  width: 100%;
+  height: 500px;
+  background: #ffffff url("./bootcamp.jpg") no-repeat center center fixed;
+  background-size: 100% 100%;
+  color:white;
+  font-weight: 50px;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
 }
 
 
